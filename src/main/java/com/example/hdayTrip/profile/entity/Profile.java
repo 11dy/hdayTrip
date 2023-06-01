@@ -20,14 +20,14 @@ public class Profile {
     private Long profileId;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column
     private String profilePicture;
 
-    @Column(columnDefinition = "TEXT")
-    private String comment;
+//    @Column(columnDefinition = "TEXT")
+//    private String comment;
 
     @Column(nullable = false)
     private Date createdDate;
